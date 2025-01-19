@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/BitDogLabSimulator.hex'
+elf = 'build\BitDogLabSimulator.elf'

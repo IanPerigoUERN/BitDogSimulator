@@ -37,10 +37,10 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(BitDogLabSimulator BitDogLabSimulator.c inc/ssd1306_i2c.c)
+add_executable(BitDogLabSimulator BitDogLabSimulator.c Display1306/ssd1306_i2c.c) #Display
 
 #Generate PIO header
-pico_generate_pio_header(BitDogLabSimulator ${CMAKE_CURRENT_LIST_DIR}/ws2812b.pio)
+pico_generate_pio_header(BitDogLabSimulator ${CMAKE_CURRENT_LIST_DIR}/LedMatrix/ws2812b.pio) #Matriz de leds
 
 pico_set_program_name(BitDogLabSimulator "BitDogLabSimulator")
 pico_set_program_version(BitDogLabSimulator "0.1")
@@ -49,18 +49,18 @@ pico_set_program_version(BitDogLabSimulator "0.1")
 pico_generate_pio_header(BitDogLabSimulator ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(BitDogLabSimulator 0)
-pico_enable_stdio_usb(BitDogLabSimulator 0)
+#pico_enable_stdio_uart(BitDogLabSimulator 1)
+pico_enable_stdio_usb(BitDogLabSimulator 1)
 
 # Add the standard library to the build
 target_link_libraries(BitDogLabSimulator
         pico_stdlib
         pico_cyw43_arch_none
-        hardware_pio
-        hardware_pwm
-        hardware_clocks
-        pico_stdlib
+        hardware_pio 
+        hardware_pwm 
+        hardware_clocks 
         hardware_i2c # Display
+        hardware_adc #Joystick
         )
 
 # Add the standard include files to the build

@@ -37,7 +37,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(BitDogLabSimulator BitDogLabSimulator.c )
+add_executable(BitDogLabSimulator BitDogLabSimulator.c inc/ssd1306_i2c.c)
 
 #Generate PIO header
 pico_generate_pio_header(BitDogLabSimulator ${CMAKE_CURRENT_LIST_DIR}/ws2812b.pio)
@@ -60,6 +60,7 @@ target_link_libraries(BitDogLabSimulator
         hardware_pwm
         hardware_clocks
         pico_stdlib
+        hardware_i2c # Display
         )
 
 # Add the standard include files to the build

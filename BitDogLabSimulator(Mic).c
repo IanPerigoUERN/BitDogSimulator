@@ -3,7 +3,7 @@
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "hardware/dma.h"
-#include "LedMatrix/neopixel.c"
+#include "Microphone/neopixel.c"
 
 // Pino e canal do microfone no ADC.
 #define MIC_CHANNEL 2

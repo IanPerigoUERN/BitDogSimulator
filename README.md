@@ -22,7 +22,7 @@ Siga as instruções da extensão Raspberry Pi Pico para configurar a estrutura 
 
 No diretório onde o projeto foi criado, execute o comando:
 
-$ git clone <[URL_DO_REPOSITORIO](https://github.com/IanPerigoUERN/BitDogSimulator.git)>
+$ git clone <(https://github.com/IanPerigoUERN/BitDogSimulator.git)>
 
 3. Preparar os Arquivos do Projeto
 

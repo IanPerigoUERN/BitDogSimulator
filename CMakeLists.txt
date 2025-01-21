@@ -37,7 +37,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(BitDogLabSimulator BitDogLabSimulator.c Display1306/ssd1306_i2c.c) #Arquivo que opera a o display
+add_executable(BitDogLabSimulator BitDogLabSimulator.c Display1306/ssd1306_i2c.c KissFFT/kissfft/kiss_fft.c) #Arquivo que opera a o display
 
 #Generate PIO header
 pico_generate_pio_header(BitDogLabSimulator ${CMAKE_CURRENT_LIST_DIR}/LedMatrix/ws2818b.pio) #Arquivo que opera a matriz de leds
@@ -70,11 +70,6 @@ target_include_directories(BitDogLabSimulator PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
-# Add any user requested libraries
-target_link_libraries(BitDogLabSimulator 
-        hardware_pio
-        pico_cyw43_arch_none
-        )
 
 pico_add_extra_outputs(BitDogLabSimulator)
 

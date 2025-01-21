@@ -4,6 +4,8 @@
 
 Bem-vindo ao repositório **BitDogLabSimulator**! Este projeto contém exemplos de uso de componentes e o arquivo principal para simulação e controle com Raspberry Pi Pico.
 
+**Vídeo com passo a passo**: [https://youtu.be/0YVhHWwAnI4](https://youtu.be/0YVhHWwAnI4)
+
 ## Pré-requisitos
 
 - Visual Studio Code (VS Code) com as extensões de suporte para Raspberry Pi Pico instaladas.
@@ -51,7 +53,7 @@ Este repositório contém quatro exemplos (**Display, JoyStick, Microfone, RGB c
 
 Tutorial como configurar Wokwi no Vscode: https://youtu.be/dQxerPvdASI
 
-Este repositório contém 2 arquivos que você pode passar para a pasta raiz do seu projeto para simular a placa BitDogLab no Vscode, todos os componentes da placa simulada estão de acordo com o esquemático** [Esquemático](https://github.com/BitDogLab/BitDogLab-C](https://github.com/BitDogLab/BitDogLab/blob/main/kicad/bitdoglabsmd/bitdoglab_main/bitdoglab_smd_schematics.pdf)
+Este repositório contém 2 arquivos que você pode passar para a pasta raiz do seu projeto para simular a placa BitDogLab no Vscode, todos os componentes da placa simulada estão de acordo com o esquemático** [Esquemático]https://github.com/BitDogLab/BitDogLab-C](https://github.com/BitDogLab/BitDogLab/blob/main/kicad/bitdoglabsmd/bitdoglab_main/bitdoglab_smd_schematics.pdf)
 
 1- wokwi.toml
 2- diagram.json
@@ -74,5 +76,5 @@ Depois de compilar o código e simular no wokwi conecte sua placa via usb e exec
 
 Siga os passos cuidadosamente para garantir que o projeto seja configurado e compilado com sucesso. Para dúvidas ou problemas, consulte a documentação oficial do Raspberry Pi Pico ou abra uma issue no repositório.
 
-**Vídeo com passo a passo**: [https://youtu.be/0YVhHWwAnI4](https://youtu.be/0YVhHWwAnI4)
+
 

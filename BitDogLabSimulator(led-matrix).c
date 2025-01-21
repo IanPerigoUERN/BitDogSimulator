@@ -2,7 +2,7 @@
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 #include "hardware/pio.h"
-//#include "ws2812b.pio.h"  // Biblioteca específica para NeoPixel
+#include "LedMatrix/ws2818b.pio.h"  // Biblioteca específica para NeoPixel
 
 #define LED_PIN 7    // GPIO conectado ao Data In do primeiro LED
 #define NUM_LEDS 25   // Número de LEDs na linha

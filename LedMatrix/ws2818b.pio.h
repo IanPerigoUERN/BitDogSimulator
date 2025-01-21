@@ -14,7 +14,7 @@
 
 #define ws2818_wrap_target 0
 #define ws2818_wrap 3
-#define ws28128pio_version 0
+#define ws2818pio_version 0
 
 #define ws2818_T1 3
 #define ws2818_T2 3
@@ -86,7 +86,7 @@ static const uint16_t ws2818_parallel_program_instructions[] = {
 };
 
 #if !PICO_NO_HARDWARE
-static const struct pio_program ws2812_parallel_program = {
+static const struct pio_program ws2818_parallel_program = {
     .instructions = ws2818_parallel_program_instructions,
     .length = 4,
     .origin = -1,
@@ -103,7 +103,7 @@ static inline pio_sm_config ws2818_parallel_program_get_default_config(uint offs
 }
 
 #include "hardware/clocks.h"
-static inline void ws2812_parallel_program_init(PIO pio, uint sm, uint offset, uint pin_base, uint pin_count, float freq) {
+static inline void ws2818_parallel_program_init(PIO pio, uint sm, uint offset, uint pin_base, uint pin_count, float freq) {
     for(uint i=pin_base; i<pin_base+pin_count; i++) {
         pio_gpio_init(pio, i);
     }
